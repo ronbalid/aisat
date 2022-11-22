@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AISAT Student Portal</title>
+	<link rel="stylesheet" href="/g4css.css"/>
+</head>
+<body>
+
+	<div class="row">
+		<div class="column">
+	   		<img src="/src/aisatlogo.png" height="250px" width="250px" width="100%">
+	</div>
+		<div class="column">
+			<img src="/src/aisatbanner.png" height="250px" width="950px" width="100%">
+		</div><br><br><br>
+	<hr width="95%" color="blue">
+
+	<nav>
+		<ul id='menuitems'>
+			<li><button class='homebtn'
+			onclick="document.getElementById('homepage').style.display='block'"style="width:auto;">HOME</button>
+			<li><button class='abtusbtn'
+			onclick="document.getElementById('abtuspage').style.display='block'"style="width:auto;">ABOUT US</button>
+			<li><button class='servicesbtn'
+			onclick="document.getElementById('servicespage').style.display='block'"style="width:auto;">SERVICES</button>
+			<li><button class='coursesbtn'
+			onclick="document.getElementById('coursespage').style.display='block'"style="width:auto;">COURSES</button>
+			<li><button class='contactbtn'
+			onclick="document.getElementById('contactpage').style.display='block'"style="width:auto;">CONTACT</button>
+			<li><button class='loginbtn'
+			onclick="document.getElementById('login-form').style.display='block'"style="width:auto;">LOGIN</button>
+			</li>
+		</ul>
+	</nav>
+
+	<hr width="95%" color="blue">
+	
+	<div id='login-form' class='login-page'>
+		<div class="form-box">
+			<div class='button-box'>
+				<div id='btn'></div>
+				<button type='button'onclick='login()' class='toggle-btn'>Log In</button>
+				<button type='button'onclick='register()' class='toggle-btn'>Register</button>
+			</div>
+
+		<form id='login' class='input-group-login'>
+			<input type='text' class='input-field' placeholder='Email ID' required>
+			<input type='password' class='input-field' placeholder='Enter Password' required>
+			<input type='checkbox' class='check-box'><span>Remember Password</span>
+			<button type='submit' class='submit-btn'>Log In</button>
+	</form>
+
+		<form method="post" action="connect.php">
+		</form>
+
+			<form id='register' class='input-group-register'>
+			<input type='text' class='input-field' placeholder='First Name' name='firstname' required>
+			<input type='text' class='input-field' placeholder='Last Name' name='lastname' required>
+			<input type='text' class='input-field' placeholder='Email' name='emailid' required>
+			<input type='text' class='input-field' placeholder='Contact' name='contact' required>
+			<label for="email">Gender</label>
+			<label for="male" class="radio-inline"><input type="radio" name="gender" id="male">Male</label>
+			<label for="female" class="radio-inline"><input type="radio" name="gender" id="female">Female</label>
+			<label for="others" class="radio-inline"><input type="radio" name="gender" id="others">Others</label>
+			<input type='Password' class='input-field' placeholder='Enter Password' name='pass' required>
+			<input type='Password' class='input-field' placeholder='Confirm Password' name='cpass' required>
+			<button type='submit' class='submit-btn'>Register</button>
+		</form>
+	</div>
+
+	<script>
+		var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register ()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+		var modal = document.getElementById('login-form');
+		window.onclick = function(event)
+		{
+			if (event.target == modal)
+			{
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+</body>
+</html>

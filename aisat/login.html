@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="/src/aisatlogo.png" alt="aisat logo" width="100px" />
+          <img src="/src/aisatbanner.png" alt="aisat banner" width="300px" />
+        </div>
+        <div class="menu">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About us</a>
+          <a href="/courses.html">Courses</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/login.html" class="active">Login / Register</a>
+        </div>
+      </nav>
+      <main>
+        <div class="test-container">
+          <input
+            class="invi-radio"
+            type="radio"
+            name="slider"
+            id="login"
+            checked
+          />
+          <input class="invi-radio" type="radio" name="slider" id="register" />
+          <div class="choose">
+            <label for="login" class="log-in">Log In</label>
+            <label for="register" class="Register">Register</label>
+          </div>
+          <section>
+            <div class="content LogIn">
+              <form action="submit">
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email ID"
+                />
+                <input
+                  class="input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter Password"
+                />
+                <label for="remember">
+                  <input type="checkbox" name="remember" id="remember" />
+                  Remember Me
+                </label>
+
+                <button type="submit">Log In</button>
+              </form>
+            </div>
+            <div class="content RegisteR">
+              <form action="submit">
+                <input
+                  class="input"
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  placeholder="First Name"
+                />
+                <input
+                  class="input"
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  placeholder="Last Name"
+                />
+                <input
+                  class="input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email ID"
+                />
+                <input
+                  class="input"
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter Phone Number"
+                />
+                <label for="gender"
+                  >Gender: <input type="radio" name="gender" id="male" /> Male
+                  <input type="radio" name="gender" id="female" /> Female
+                  <input type="radio" name="gender" id="others" /> Others
+                </label>
+                <input
+                  class="input"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter Password"
+                />
+                <input
+                  class="input"
+                  type="password"
+                  name="confirmpassword"
+                  id="confirmpassword"
+                  placeholder="Confirm Password"
+                />
+
+                <button type="submit">Register</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script></script>
+</html>
